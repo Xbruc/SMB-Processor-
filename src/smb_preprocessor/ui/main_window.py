@@ -683,8 +683,8 @@ class MainWindow(QMainWindow):
         form.addRow("Fim inclusivo:", self.end)
         form.addRow("Números dos oceanos SL:", self.sea_numbers)
         form.addRow("Números dos rios Q:", self.river_numbers)
-        form.addRow("Nome do arquivo PRN:", self.boundary_filename)
         form.addRow("Pasta de saída:", self.series_output)
+        form.addRow("Nome do arquivo PRN:", self.boundary_filename)
         note = QLabel(
             "Separe os números por vírgula. A mesma vazão será aplicada a todos "
             "os rios e a mesma maré a todos os oceanos informados."
