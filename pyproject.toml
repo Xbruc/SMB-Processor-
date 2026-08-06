@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smb-processor"
+version = "0.1.0"
+description = "SMB Processor: pré-processamento hidrodinâmico e modelagem costeira"
+requires-python = ">=3.11"
+dependencies = [
+  "PySide6>=6.6",
+  "numpy>=1.24,<2",
+  "pandas>=2.0",
+  "matplotlib>=3.7",
+  "plotly>=5.18",
+  "gmsh>=4.12",
+  "netCDF4>=1.6",
+  "pyproj>=3.6",
+  "scipy>=1.11",
+  "shapely>=2.0",
+  "imageio-ffmpeg>=0.5",
+]
+
+[project.scripts]
+smb-processor = "smb_preprocessor.main:main"
+# Mantido para instalações existentes e atalhos antigos.
+cebsm-preprocessor = "smb_preprocessor.main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+smb_preprocessor = [
+  "assets/map/*",
+  "assets/map/images/*",
+  "assets/stfm/*.png",
+  "assets/branding/*.png",
+  "assets/icons/*.svg",
+]

@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Builds
+build/
+dist/
+
+# Editores
+.vscode/
+.idea/
+
+# Configurações e segredos
+.env
+*.env
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Logs e arquivos temporários
+*.log
+*.tmp
